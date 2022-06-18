@@ -93,6 +93,7 @@ def isGameFinished():
     return foundImage != None
 
 def saveScore():
+    time.sleep(1) # wait a bit for scores to show
     SCORE_BOX = (round(SCREEN_WIDTH * (5 / 12)), 0, round(SCREEN_WIDTH / 6), round(SCREEN_HEIGHT / 4))
     screenshot = pyautogui.screenshot(region=SCORE_BOX)
     screenshot.save(os.path.join(GAME_SESSION_FOLDER, "score.png"));
